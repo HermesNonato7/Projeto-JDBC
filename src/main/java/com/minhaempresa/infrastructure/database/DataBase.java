@@ -1,4 +1,4 @@
-package com.minhaempresa.infraestructure.database;
+package com.minhaempresa.infrastructure.database;
 
 import java.io.FileInputStream;
 import java.io.IOException;
