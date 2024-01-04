@@ -1,4 +1,4 @@
-package com.minhaempresa.infraestructure.database;
+package com.minhaempresa.infrastructure.database;
 
 public class DataBaseIntegrityException extends RuntimeException {
     private static final long serialVersionUID = 1L;
