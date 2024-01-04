@@ -1,4 +1,4 @@
-package com.minhaempresa.infraestructure.models;
+package com.minhaempresa.infrastructure.models;
 
 import java.io.Serializable;
 import java.util.Objects;
