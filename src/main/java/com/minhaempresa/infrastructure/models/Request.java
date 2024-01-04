@@ -1,11 +1,11 @@
-package com.minhaempresa.infraestructure.models;
+package com.minhaempresa.infrastructure.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 /*
-    Esta classe representa o modelo da entidade
+    Esta classe representa o modelo da entidade.
 
     O modelo de entidade deve:
 
