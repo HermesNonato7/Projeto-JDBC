@@ -1,4 +1,4 @@
-package com.minhaempresa.infraestructure.database;
+package com.minhaempresa.infrastructure.database;
 
 /*
     A classe abaixo foi derivada da RuntimeException para que no programa não precise toda hora
