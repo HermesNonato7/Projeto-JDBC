@@ -55,7 +55,7 @@ public class Customer implements Serializable {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) { // No 'equals' e 'hashCode' colocar somente o atributo Primary Key
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
