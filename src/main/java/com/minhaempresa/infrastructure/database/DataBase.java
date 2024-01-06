@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
+
 /*
     Classe auxiliar para tratar das conexões com o banco de dados
 
@@ -19,21 +20,19 @@ public class DataBase {
             Properties properties = new Properties();
             properties.load(fileInputStream);
             return properties;
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new DataBaseException(e.getMessage());
         }
     }
 
     public static Connection getConnection() {
-        if(connection == null) {
+        if (connection == null) {
             try {
                 Properties properties = loadProperties();
                 String url = properties.getProperty("dburl");
                 connection = DriverManager.getConnection(url, properties);
                 connection.setAutoCommit(false);
-            }
-            catch(SQLException e) {
+            } catch (SQLException e) {
                 throw new DataBaseException(e.getMessage());
             }
         }
@@ -41,18 +40,17 @@ public class DataBase {
     }
 
     public static void closeConnection() {
-        if(connection != null) {
+        if (connection != null) {
             try {
                 connection.close();
-            }
-            catch (SQLException e) {
+            } catch (SQLException e) {
                 throw new DataBaseException(e.getMessage());
             }
         }
     }
 
     public static void closeStatement(Statement statement) {
-        if(statement != null) {
+        if (statement != null) {
             try {
                 statement.close();
             } catch (SQLException e) {
@@ -62,7 +60,7 @@ public class DataBase {
     }
 
     public static void closeResultSet(ResultSet resultSet) {
-        if(resultSet != null) {
+        if (resultSet != null) {
             try {
                 resultSet.close();
             } catch (SQLException e) {
@@ -72,22 +70,20 @@ public class DataBase {
     }
 
     public static void commit() {
-        if(connection != null) {
+        if (connection != null) {
             try {
                 connection.commit();
-            }
-            catch (SQLException e) {
+            } catch (SQLException e) {
                 throw new DataBaseException(e.getMessage());
             }
         }
     }
 
-    public static void rollback() {
-        if(connection != null) {
+    public static void rollback() { // desfaz a transação se der problema
+        if (connection != null) {
             try {
                 connection.rollback();
-            }
-            catch (SQLException e) {
+            } catch (SQLException e) {
                 throw new DataBaseException(e.getMessage());
             }
         }
