@@ -45,6 +45,7 @@ public class Request implements Serializable {
 
     public LocalDateTime getDate() {
         return date;
+
     }
 
     public void setDate(LocalDateTime date) {
