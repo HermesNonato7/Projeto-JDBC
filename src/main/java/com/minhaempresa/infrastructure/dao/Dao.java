@@ -29,5 +29,8 @@ public interface Dao<T> {
     }
 
     List<T> findAll();
+
+//    'Interface' genérica, poderia ter criado uma 'interface' para cada entidades/modelos.
+//    As classes especializadas em acessar o banco de dados estão na pasta impl.
 }
 
