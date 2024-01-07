@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDao implements Dao<Customer> {
+public class CustomerDao implements Dao<Customer> { // Aqui poderia implementar uma outra 'interface' (Customer).
     private final Connection connection;
 
     public CustomerDao(Connection connection) {
